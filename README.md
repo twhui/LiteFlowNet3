@@ -7,14 +7,14 @@ This software and associated documentation files (the "Software"), and the resea
 <pre><code>@InProceedings{hui20liteflownet3,    
  author = {Tak-Wai Hui and Chen Change Loy},    
  title = {{LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation}}, 
- journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ journal = {Proceedings of the European Conference on Computer Vision (ECCV)},
  year = {2020},    
 }</code></pre>
 
 <pre><code>@InProceedings{hui20liteflownet2,    
  author = {Tak-Wai Hui and Xiaoou Tang and Chen Change Loy},    
  title = {{A Lightweight Optical Flow CNN - Revisiting Data Fidelity and Regularization}, 
- journal = {Proceedings of the European Conference on Computer Vision (ECCV)},
+ journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
  year = {2020},    
  url = {http://mmlab.ie.cuhk.edu.hk/projects/LiteFlowNet/} 
 }</code></pre>
