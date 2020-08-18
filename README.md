@@ -1,5 +1,7 @@
 # LiteFlowNet3
-This repository (<strong>https://github.com/twhui/LiteFlowNet3</strong>) is the offical release of <strong>LiteFlowNet3</strong> for my paper <strong>LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation</strong> in ECCV 2020. The pre-print is available <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171.pdf"> <strong>here</strong></a> and the supplementary material is available <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171-supp.pdf"> <strong>here</strong></a>. A summary video is available on <a href="https://www.youtube.com/watch?v=Bz7ifJLYR8c"> <strong>YouTube</strong></a>.
+This repository (<strong>https://github.com/twhui/LiteFlowNet3</strong>) is the offical release of <strong>LiteFlowNet3</strong> for my paper <strong>LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation</strong> in ECCV 2020. The pre-print is available <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171.pdf"> <strong>here</strong></a> and the supplementary material is available <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171-supp.pdf"> <strong>here</strong></a>. 
+
+A summary video is available on <a href="https://www.youtube.com/watch?v=Bz7ifJLYR8c?autoplay=1"> <strong>YouTube</strong></a>.
 
 </ul>
 <table>
