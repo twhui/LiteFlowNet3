@@ -98,7 +98,7 @@ LiteFlowNet3 uses the same Caffe package as LiteFlowNet. Please refer to the det
 Please refer to the training steps in <a href="https://github.com/twhui/LiteFlowNet#Training"> LiteFlowNet GitHub repository</a> and adopt the training protocols in <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171.pdf"> LiteFlowNet3 paper</a>.
 
 # Trained models	
-Download the models: <a href="">LiteFlowNet3-ft-sintel</a>, <a href="">LiteFlowNet3-ft-kitti</a>, <a href="">LiteFlowNet3-S-ft-sintel</a>, <a href="">LiteFlowNet3-S-ft-kitti</a>, and place the models in the folder <code>models/trained<code>.
+Download the models (<a href="https://www.dropbox.com/s/am76x1cg735ekbd/LiteFlowNet3-ft-sintel.tar.gz?dl=0">LiteFlowNet3-ft-sintel</a>, <a href="https://www.dropbox.com/s/a1bbpqek3o5i1vm/LiteFlowNet3-ft-kitti.tar.gz?dl=0">LiteFlowNet3-ft-kitti</a>, <a href="https://www.dropbox.com/s/0j2wk17z742cd65/LiteFlowNet3-S-ft-sintel.tar.gz?dl=0">LiteFlowNet3-S-ft-sintel</a>, <a href="https://www.dropbox.com/s/13fszxgssf6qv2k/LiteFlowNet3-S-ft-kitti.tar.gz?dl=0">LiteFlowNet3-S-ft-kitti</a>) and then place the models in the folder <code>models/trained</code>.
 
 # Testing 
 1. Open the testing folder
