@@ -98,7 +98,7 @@ LiteFlowNet3 uses the same Caffe package as LiteFlowNet. Please refer to the det
 Please refer to the training steps in <a href="https://github.com/twhui/LiteFlowNet#Training"> LiteFlowNet GitHub repository</a> and adopt the training protocols in <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171.pdf"> LiteFlowNet3 paper</a>.
 
 # Trained models	
-To be uploaded.
+Download the models: <a href="">LiteFlowNet3-ft-sintel</a>, <a href="">LiteFlowNet3-ft-kitti</a>, <a href="">LiteFlowNet3-S-ft-sintel</a>, <a href="">LiteFlowNet3-S-ft-kitti</a>, and place the models in the folder <code>models/trained<code>.
 
 # Testing 
 1. Open the testing folder
@@ -109,7 +109,7 @@ To be uploaded.
 
 3. Replace <code>MODE</code> in <code>./test_MODE.py</code> to <code>batch</code> if all the images has the same resolution (e.g. Sintel dataset), otherwise replace it to <code>iter</code> (e.g. KITTI dataset).
 
-4. Replace <code>MODEL</code> in line 10 (<code>cnn_model = 'MODEL'</code>) of <code>test_MODE.py</code> to one of the trained models (e.g. <code>LiteFlowNet2-ft-sintel</code>).
+4. Replace <code>MODEL</code> in lines 9 and 10 of <code>test_MODE.py</code> to one of the trained models (e.g. <code>LiteFlowNet3-ft-sintel</code>).
 
 5. Run the testing script. Flow fields (<code>MODEL</code>-0000000.flo, <code>MODEL</code>-0000001.flo, ... etc) are stored in the folder <code>/testing/results</code> having the same order as the image pair sequence. 
 <pre><code>$ test_MODE.py img1_pathList.txt img2_pathList.txt results</code></pre>
