@@ -133,7 +133,7 @@ for idx in reversed(range(len(images[0]))):
 
     # Run caffe
     args = [caffe_bin, 'test', '-model', 'tmp/deploy.prototxt',
-            '-weights', './training/ + cnn_model, '.caffemodel',
+            '-weights', '../trained' + cnn_model + '.caffemodel',
             '-iterations', str(1),
             '-gpu', '0']
 
