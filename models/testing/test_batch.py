@@ -126,7 +126,7 @@ with open('tmp/deploy.prototxt', "w") as tfile:
 # Run caffe
 
 args = [caffe_bin, 'test', '-model', 'tmp/deploy.prototxt',
-        '-weights', './training/' + cnn_model + '.caffemodel',
+        '-weights', '../trained/' + cnn_model + '.caffemodel',
         '-iterations', str(list_length),
         '-gpu', '0']
 
