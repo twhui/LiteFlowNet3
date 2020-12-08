@@ -72,6 +72,7 @@ This software and associated documentation files (the "Software"), and the resea
  title = {{LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation}}, 
  journal = {{Proceedings of the European Conference on Computer Vision (ECCV)}},
  year = {2020},    
+ pages = {169--184},
 }</code></pre>
 
 <pre><code>@InProceedings{hui20liteflownet2,    
