@@ -1,7 +1,13 @@
 # LiteFlowNet3
-This repository (<strong>https://github.com/twhui/LiteFlowNet3</strong>) is the offical release of <strong>LiteFlowNet3</strong> for my paper <strong>LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation</strong> in ECCV 2020. The pre-print is available <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171.pdf"> <strong>here</strong></a> and the supplementary material is available <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171-supp.pdf"> <strong>here</strong></a>. 
+This repository (<strong>https://github.com/twhui/LiteFlowNet3</strong>) is the offical release of <strong>LiteFlowNet3</strong> for my paper <strong>LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation</strong> in ECCV 2020. The pre-print is available at <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171.pdf"> <strong>ECVA</strong></a> or <a href="https://arxiv.org/pdf/2007.09319.pdf"> <strong>
+arXiv</strong></a>. The supplementary material is also available at <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171-supp.pdf"> <strong>ECVA</strong></a>. 
 
 A summary video is available on <a href="https://www.youtube.com/watch?v=Bz7ifJLYR8c?autoplay=1"> <strong>YouTube</strong></a>.
+
+# Contributions
+(1) <strong>Cost Volume Modulation</strong>: Ameliorate the issue of outliers in the cost volume by amending each cost vector through an adaptive modulation prior to the flow decoding.
+
+(2) <strong>Flow Field Deformation</strong>: Improve the flow accuracy by exploring local flow consistency. To this end, each inaccurate optical flow is replaced with an accurate one from a nearby position through a novel warping of the flow field.
 
 </ul>
 <table>
