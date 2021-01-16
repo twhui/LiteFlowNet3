@@ -1,5 +1,4 @@
 # LiteFlowNet3
-# LiteFlowNet3
 This repository (<strong>https://github.com/twhui/LiteFlowNet3</strong>) provides the offical release of the code package for my paper "<strong>LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation</strong>" published in <a href="https://eccv2020.eu/"> ECCV 2020</a>. The pre-print is available on <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171.pdf"> <strong>ECVA</strong></a> or <a href="https://arxiv.org/pdf/2007.09319.pdf"> <strong>
 arXiv (July 2020)</strong></a>. Supplementary material is released on <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171-supp.pdf"> <strong>ECVA</strong></a>. A short summary video is also available on <a href="https://www.youtube.com/watch?v=Bz7ifJLYR8c?autoplay=1"> <strong>YouTube</strong></a> as well.
 
