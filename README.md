@@ -1,17 +1,21 @@
 # LiteFlowNet3
-This repository (<strong>https://github.com/twhui/LiteFlowNet3</strong>) provides the offical release of the code package for my paper "<strong>LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation</strong>" published in <a href="https://eccv2020.eu/"> ECCV 2020</a>. The pre-print is available on <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171.pdf"> <strong>ECVA</strong></a> or <a href="https://arxiv.org/pdf/2007.09319.pdf"> <strong>
-arXiv (July 2020)</strong></a>. Supplementary material is released on <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171-supp.pdf"> <strong>ECVA</strong></a>. A short summary video is also available on <a href="https://www.youtube.com/watch?v=Bz7ifJLYR8c?autoplay=1"> <strong>YouTube</strong></a> as well.
+
+<a href="https://github.com/twhui/LiteFlowNet3#Overview"> <strong>Overview</strong></a> // <a href="https://github.com/twhui/LiteFlowNet3#cost-volume-modulation-cm"> <strong>Cost Volume Modulation (CM)</strong></a> // <a href="https://github.com/twhui/LiteFlowNet3#flow-field-deformation-fd"> <strong>Flow Field Deformation (FD)</strong></a> // <a href="https://github.com/twhui/LiteFlowNet3#Performance"> <strong>Performance</strong></a> // <a href="https://github.com/twhui/LiteFlowNet3#Declaration"> <strong>Declaration</strong></a> // <a href="https://github.com/twhui/LiteFlowNet3#License-and-Citation"> <strong>License and Citation</strong></a> // <a href="https://github.com/twhui/LiteFlowNet3#Prerequisite-and-Compiling"> <strong>Prerequisite and Compiling</strong></a> // <a href="https://github.com/twhui/LiteFlowNet3#Training"> <strong>Training</strong></a> // <a href="https://github.com/twhui/LiteFlowNet3#Trained-models"> <strong>Trained Models</strong></a> // <a href="https://github.com/twhui/LiteFlowNet3#Testing"> <strong>Testing</strong></a>
+ 
+This repository (https://github.com/twhui/LiteFlowNet3) provides the offical release of the code package for my paper "LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation" published in <a href="https://eccv2020.eu/"> ECCV 2020</a>. The pre-print is available on <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171.pdf"> ECVA</a> or <a href="https://arxiv.org/pdf/2007.09319.pdf"> 
+arXiv (July 2020)</a>. Supplementary material is released on <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171-supp.pdf"> ECVA</a>. A short summary video is also available on <a href="https://www.youtube.com/watch?v=Bz7ifJLYR8c?autoplay=1"> YouTube</a> as well.
 
 # Overview
 <img src="./figures/LiteFlowNet3.png" width="700"/>
 LiteFlowNet3 is built upon our previous work <a href="https://github.com/twhui/LiteFlowNet2"> LiteFlowNet2 (TPAMI 2020) </a> with the incorporation of cost volume modulation (CM) and flow field deformation (FD) for improving the flow accuracy further. For the ease of presentation, only a 2-level encoder-decoder structure is shown. The proposed modules are applicable to other levels but not limited to level 1.
 
-# Contributions
+# Cost Volume Modulation (CM)
 <p><img src="./figures/cost_volume_modulation.png" width="700"/> <br>
-<strong>(1) Cost volume modulation (CM)</strong>: Given a pair of images, the existence of partial occlusion and homogeneous regions makes the establishment of correspondence very challenging. This situation also occurs on feature space because simply transforming images into feature maps does not resolve the correspondence ambiguity. In this way, a cost volume is corrupted and the subsequent flow decoding is seriously affected. To address this problem, we propose to filter outliers in a cost volume by using an adaptive modulation before performing the flow decoding. Besides, a confidence map is introduced to facilitate generating modulation parameters. </p> 
+Given a pair of images, the existence of partial occlusion and homogeneous regions makes the establishment of correspondence very challenging. This situation also occurs on feature space because simply transforming images into feature maps does not resolve the correspondence ambiguity. In this way, a cost volume is corrupted and the subsequent flow decoding is seriously affected. To address this problem, we propose to filter outliers in a cost volume by using an adaptive modulation before performing the flow decoding. Besides, a confidence map is introduced to facilitate generating modulation parameters. </p> 
 
+# Flow Field Deformation (FD)
 <p><img src="./figures/flow_field_deformation.png" width="700"/> <br>
-<strong>(2) Flow field deformation (FD)</strong>: In coarse-to-fine flow estimation, a flow estimate from the previous level is used as the flow initialization for the next level. This highly demands the previous estimate to be accurate. Otherwise, erroneous optical flow is propagated to the subsequent levels. Due to local flow consistency, neighboring image points that have similar feature vectors have similar optical flow. With this motivation, we propose to refine a given flow field by replacing each inaccurate optical flow with an accurate one from a nearby position. The refinement can be easily achieved by meta-warping of the flow field according to a displacement field. An auto-correlation cost volume of feature map is used to store the similarity score of neighboring image points. To avoid trivial solution, a confidence map associated with the given flow field is used to guide the displacement decoding from the cost volume. </p>
+In coarse-to-fine flow estimation, a flow estimate from the previous level is used as the flow initialization for the next level. This highly demands the previous estimate to be accurate. Otherwise, erroneous optical flow is propagated to the subsequent levels. Due to local flow consistency, neighboring image points that have similar feature vectors have similar optical flow. With this motivation, we propose to refine a given flow field by replacing each inaccurate optical flow with an accurate one from a nearby position. The refinement can be easily achieved by meta-warping of the flow field according to a displacement field. An auto-correlation cost volume of feature map is used to store the similarity score of neighboring image points. To avoid trivial solution, a confidence map associated with the given flow field is used to guide the displacement decoding from the cost volume. </p>
 
 # Performance
 </ul>
@@ -75,6 +79,18 @@ LiteFlowNet3 is built upon our previous work <a href="https://github.com/twhui/L
 
 Note: *Runtime is averaged over 100 runs for a Sintel's image pair of size 1024 × 436. 
 
+# Declaration
+Before LiteFlowNet3 was published in <a href="https://eccv2020.eu/">ECCV 2020</a>, it was submitted to <a href="https://iccv2019.thecvf.com/">ICCV 2019</a> and <a href="http://cvpr2020.thecvf.com/">CVPR 2020</a>. The old version of Flow Field Deformation (ICCV 2019 submission) is not well-designed. Masking of deformed flow field in some image positions is not necessary as this is equivalent to have zero displacement in the displacement field d, i.e. d(x0) = 0 for some image positions x0.
+<img src="./figures/flow_field_deformation_for_ICCV19_submission.png" width="700"/>
+
+Two recent works [<a href="https://arxiv.org/pdf/2011.02156.pdf">a</a>, b] also claimed very similar contributions (including the motivations and technical details) as our <a href="https://github.com/twhui/LiteFlowNet3#flow-field-deformation-fd"> Flow Field Deformation</a>. We need to declare that we are the first to propose this contribution for improving optical flow estimation but not them.
+
+[a] <a href="https://arxiv.org/pdf/2011.02156.pdf">CoT-AMFlow: Adaptive Modulation Network with Co-Teaching Strategy for Unsupervised Optical Flow Estimation, CoRL 2020</a>.
+
+Note: The motivation and technical detail of Flow Modulation Module (FMM) (the 2nd paragraph, Sect. 3.1) in <a href="https://arxiv.org/pdf/2011.02156.pdf">their CoRL 2020 paper [a]</a> are very similar to that of Flow Field Deformation (FD) (Sect. 3.3) in <a href="https://arxiv.org/pdf/2007.09319.pdf"> our ECCV 2020 paper</a>. The only difference between FMM and FD is that their confidence map is explictly computed to adapt for the unsupervised training while we implictly learn it from the training labels. 
+
+[b] To be provided.
+
 # License and Citation 
 This software and associated documentation files (the "Software"), and the research paper (LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation) including but not limited to the figures, and tables (the "Paper") are provided for academic research purposes only and without any warranty. Any commercial use requires my consent. When using any parts of the Software or the Paper in your work, please cite the following papers:
 
@@ -109,7 +125,7 @@ LiteFlowNet3 uses the same Caffe package as LiteFlowNet. Please refer to the det
 # Training
 Please refer to the training steps in <a href="https://github.com/twhui/LiteFlowNet#Training"> LiteFlowNet GitHub repository</a> and adopt the training protocols in <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171.pdf"> LiteFlowNet3 paper</a>.
 
-# Trained models	
+# Trained Models	
 Download the models (<a href="https://www.dropbox.com/s/am76x1cg735ekbd/LiteFlowNet3-ft-sintel.tar.gz?dl=0">LiteFlowNet3-ft-sintel</a>, <a href="https://www.dropbox.com/s/a1bbpqek3o5i1vm/LiteFlowNet3-ft-kitti.tar.gz?dl=0">LiteFlowNet3-ft-kitti</a>, <a href="https://www.dropbox.com/s/0j2wk17z742cd65/LiteFlowNet3-S-ft-sintel.tar.gz?dl=0">LiteFlowNet3-S-ft-sintel</a>, <a href="https://www.dropbox.com/s/13fszxgssf6qv2k/LiteFlowNet3-S-ft-kitti.tar.gz?dl=0">LiteFlowNet3-S-ft-kitti</a>) and then place the models in the folder <code>models/trained</code>.
 
 # Testing 
@@ -125,6 +141,3 @@ Download the models (<a href="https://www.dropbox.com/s/am76x1cg735ekbd/LiteFlow
 
 5. Run the testing script. Flow fields (<code>MODEL</code>-0000000.flo, <code>MODEL</code>-0000001.flo, ... etc) are stored in the folder <code>/testing/results</code> having the same order as the image pair sequence. 
 <pre><code>$ test_MODE.py img1_pathList.txt img2_pathList.txt results</code></pre>
-
-# Declaration
-The early version of LiteFlowNet3 was submitted to <a href="https://iccv2019.thecvf.com/"> ICCV 2019</a> for reviewing in March 2019. The improved work was offically published in <a href="https://eccv2020.eu/"> ECCV 2020 </a> in August 2020. We uploaded a preprint to <a href="https://arxiv.org/pdf/2007.09319.pdf"> arXiv</a> in July 2020. We are the first and the original authors to propose the aforementioned <a href="https://github.com/twhui/LiteFlowNet3#Contributions"> contributions </a> (including but not limited to the motivations and technical details) for optical flow estimation. 
