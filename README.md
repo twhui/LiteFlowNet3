@@ -6,15 +6,15 @@ This repository (https://github.com/twhui/LiteFlowNet3) provides the offical rel
 arXiv (July 2020)</a>. Supplementary material is released on <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171-supp.pdf"> ECVA</a>. A short summary video is also available on <a href="https://www.youtube.com/watch?v=Bz7ifJLYR8c?autoplay=1"> YouTube</a> as well.
 
 # Overview
-<img src="./figures/LiteFlowNet3.png" width="700"/>
+<p align="center"><img src="./figures/LiteFlowNet3.png" width="700" /></p>
 LiteFlowNet3 is built upon our previous work <a href="https://github.com/twhui/LiteFlowNet2"> LiteFlowNet2 (TPAMI 2020) </a> with the incorporation of cost volume modulation (CM) and flow field deformation (FD) for improving the flow accuracy further. For the ease of presentation, only a 2-level encoder-decoder structure is shown. The proposed modules are applicable to other levels but not limited to level 1.
 
 # Cost Volume Modulation (CM)
-<p><img src="./figures/cost_volume_modulation.png" width="700"/> <br>
+<p align="center"><img src="./figures/cost_volume_modulation.png" width="700" /></p>
 Given a pair of images, the existence of partial occlusion and homogeneous regions makes the establishment of correspondence very challenging. This situation also occurs on feature space because simply transforming images into feature maps does not resolve the correspondence ambiguity. In this way, a cost volume is corrupted and the subsequent flow decoding is seriously affected. To address this problem, we propose to filter outliers in a cost volume by using an adaptive modulation before performing the flow decoding. Besides, a confidence map is introduced to facilitate generating modulation parameters. </p> 
 
 # Flow Field Deformation (FD)
-<p><img src="./figures/flow_field_deformation.png" width="700"/> <br>
+<p align="center"><img src="./figures/flow_field_deformation.png" width="700" /></p>
 In coarse-to-fine flow estimation, a flow estimate from the previous level is used as the flow initialization for the next level. This highly demands the previous estimate to be accurate. Otherwise, erroneous optical flow is propagated to the subsequent levels. Due to local flow consistency, neighboring image points that have similar feature vectors have similar optical flow. With this motivation, we propose to refine a given flow field by replacing each inaccurate optical flow with an accurate one from a nearby position. The refinement can be easily achieved by meta-warping of the flow field according to a displacement field. An auto-correlation cost volume of feature map is used to store the similarity score of neighboring image points. To avoid trivial solution, a confidence map associated with the given flow field is used to guide the displacement decoding from the cost volume. </p>
 
 # Performance
@@ -81,7 +81,7 @@ Note: *Runtime is averaged over 100 runs for a Sintel's image pair of size 1024 
 
 # Declaration
 Before LiteFlowNet3 was published in <a href="https://eccv2020.eu/">ECCV 2020</a>, it was submitted to <a href="https://iccv2019.thecvf.com/">ICCV 2019</a> and <a href="http://cvpr2020.thecvf.com/">CVPR 2020</a>. The old version of Flow Field Deformation (ICCV 2019 submission) is not well-designed. Masking of deformed flow field in some image positions is not necessary as this is equivalent to have zero displacement in the displacement field d, i.e. d(x0) = 0 for some image positions x0.
-<img src="./figures/flow_field_deformation_for_ICCV19_submission.png" width="700"/>
+<p align="center"><img src="./figures/flow_field_deformation_for_ICCV19_submission.png" width="700" /></p>
 
 Two recent works [<a href="https://arxiv.org/pdf/2011.02156.pdf">a</a>, b] also claimed very similar contributions (including the motivations and technical details) as our <a href="https://github.com/twhui/LiteFlowNet3#flow-field-deformation-fd"> Flow Field Deformation</a>. We need to declare that we are the first to propose this contribution for improving optical flow estimation but not them.
 
