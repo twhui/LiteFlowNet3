@@ -1,10 +1,10 @@
-Copyright (c) 2020 Tak-Wai Hui
+Copyright (c) 2020 Tak-Wai Hui. All rights reserved.
 
-This software and associated documentation files (the "Software"), and the research paper
-(LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation)
-including but not limited to the figures, and tables (the "Paper") are provided for academic 
-research purposes only and without any warranty. Any commercial use requires my consent. When 
-using any parts of the Software or the Paper in your work, please cite the following papers:
+This software and the associated documentation files (the "Software"), and the research paper
+LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation (the "Paper") 
+including but not limited to the figures and tables are provided for non-commercial use only and 
+without any warranty. Any commercial use requires a prior arrangement with the author (Tak-Wai Hui). 
+When using any parts of the Software or the Paper in your work, please cite the following papers:
 
 @InProceedings{hui20liteflownet3,
  author = {Tak-Wai Hui and Chen Change Loy},
