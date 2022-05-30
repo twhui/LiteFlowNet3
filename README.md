@@ -87,7 +87,7 @@ Two recent works [<a href="https://arxiv.org/pdf/2011.02156.pdf">a</a>, <a href=
 
 [a] <a href="https://arxiv.org/pdf/2011.02156.pdf">CoT-AMFlow: Adaptive Modulation Network with Co-Teaching Strategy for Unsupervised Optical Flow Estimation, CoRL 2020</a>.
 
-Note: The motivation and technical detail of Flow Modulation Module (FMM) (the 2nd paragraph, Sect. 3.1) in their <a href="https://arxiv.org/pdf/2011.02156.pdf">CoRL 2020 paper</a> are very similar to that of Flow Field Deformation (FD) (Sect. 3.3) in our <a href="https://arxiv.org/pdf/2007.09319.pdf"> ECCV 2020 paper</a>. The only difference between FMM and FD is that their confidence map is explictly computed to adapt for the unsupervised training while we implictly learn it from the training labels. 
+Note: The motivation and technical detail of Flow Modulation Module (FMM) (Sect. 3.1) in their <a href="https://arxiv.org/pdf/2011.02156.pdf">CoRL 2020 paper</a> are very similar to that of Flow Field Deformation (FD) (Sect. 3.3) in our <a href="https://arxiv.org/pdf/2007.09319.pdf"> ECCV 2020 paper</a>. The only difference between FMM and FD is that their confidence map is explictly computed to adapt for the unsupervised training while we implictly learn it from the training labels. 
 
 [b] <a href="https://arxiv.org/pdf/2012.00212.pdf">UPFlow: Upsampling Pyramid for Unsupervised Optical Flow Learning, CVPR 2021</a>.
 
