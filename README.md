@@ -6,7 +6,7 @@ This repository (https://github.com/twhui/LiteFlowNet3) provides the offical rel
 arXiv (July 2020)</a>. Supplementary material is released on <a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171-supp.pdf"> ECVA</a>.  
 
 <a href="https://www.youtube.com/watch?v=Bz7ifJLYR8c">
-<p align="center"><img src="./figures/summary_video_thumbnail.png" width="600" /></p>
+<p align="center"><img src="./figures/demo video thumbnail.png" width="600" /></p>
 </a>
 
 # Overview
